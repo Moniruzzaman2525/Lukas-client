@@ -1,81 +1,81 @@
 [
     {
         "image": "https://htmldemo.net/lukas/lukas/assets/img/product/product-1.png",
-        "price": 26,
-        "inStock": 39,
-        "mnQuantity": 34,
+        "price": 25,
+        "inStock": 2000,
+        "mnQuantity": 500,
         "name": "DISK BREAK",
         "description": " a brake that operates by the action of a frictional material pressed against the sides of a rotating disc by a caliper."
     },
     {
         "image": "https://htmldemo.net/lukas/lukas/assets/img/product/product-2.png",
         "price": 24,
-        "inStock": 27,
-        "mnQuantity": 37,
+        "inStock": 2600,
+        "mnQuantity": 360,
         "name": "wHEEL FRAME",
         "description": "The steering column turns a large screw which meshes with the nut by recirculating balls. The nut moves a sector of a gear, causing it to rotate about its axis as the screw is turned; an arm attached to the axis of the sector moves the Pitman arm, which is connected to the steering linkage and thus steers the wheels."
     },
     {
         "image": "https://htmldemo.net/lukas/lukas/assets/img/product/product-3.png",
-        "price": 24,
-        "inStock": 27,
-        "mnQuantity": 37,
+        "price": 65,
+        "inStock": 1500,
+        "mnQuantity": 300,
         "name": "CAR STEERING",
         "description": "The steering column turns a large screw which meshes with the nut by recirculating balls. The nut moves a sector of a gear, causing it to rotate about its axis as the screw is turned; an arm attached to the axis of the sector moves the Pitman arm, which is connected to the steering linkage and thus steers the wheels"
     },
     {
         "image": "https://htmldemo.net/lukas/lukas/assets/img/product/product-7.png",
-        "price": 24,
-        "inStock": 27,
-        "mnQuantity": 37,
+        "price": 45,
+        "inStock": 2100,
+        "mnQuantity": 650,
         "name": "AUTO CLUTCH $ BRAKE",
         "description": "The purpose of a clutch brake is to stop or slow the input shaft from rotating, allowing the gears to mesh without grinding/clashing. This eliminates damage to non-synchronized transmissions, and minimizes the effort required when shifting from neutral into first or reverse from a standsti"
     },
     {
         "image": "https://htmldemo.net/lukas/lukas/assets/img/product/product-9.png",
-        "price": 24,
-        "inStock": 27,
-        "mnQuantity": 37,
+        "price": 40,
+        "inStock": 3000,
+        "mnQuantity": 1000,
         "name": "Leather Steering Wheel",
         "description": "Car steering wheels are often covered with leather in the higher price categories. Because they are in regular contact with skin and sweat, they are almost"
     },
     {
         "image": "https://htmldemo.net/lukas/lukas/assets/img/product/product-5.png",
-        "price": 24,
-        "inStock": 27,
-        "mnQuantity": 37,
+        "price": 62,
+        "inStock": 2600,
+        "mnQuantity": 800,
         "name": "17 inch Rims 8 Lug",
         "description": "Products with electrical plugs are designed for use in the US. Outlets and voltage differ internationally and this product may require an adapter or converter for use in your destination. Please check compatibility before purchasing."
     },
     {
         "image": "https://htmldemo.net/lukas/lukas/assets/img/product/product-11.png",
-        "price": 24,
-        "inStock": 27,
-        "mnQuantity": 37,
+        "price": 55,
+        "inStock": 2700,
+        "mnQuantity": 370,
         "name": "Locking Hub Diagram",
         "description": "Locking hubs, also known as free wheeling hubs are fitted to some (mainly older) four-wheel drive vehicles, allowing the front wheels to rotate freely when"
     },
     {
         "image": "https://htmldemo.net/lukas/lukas/assets/img/product/product-8.png",
-        "price": 24,
-        "inStock": 27,
-        "mnQuantity": 37,
+        "price": 54,
+        "inStock": 2200,
+        "mnQuantity": 700,
         "name": "17 inch Rims 8 Lug",
         "description": "Discounted Wheel Warehouse has many styles to choose from in 8 lug truck wheels with free ... Vision Wheels 85 Soft 8 17x9 Gloss Black 8x165.1 -12mm 130.8mm."
     },
     {
         "image": "https://htmldemo.net/lukas/lukas/assets/img/product/product-4.png",
-        "price": 24,
-        "inStock": 27,
-        "mnQuantity": 37,
+        "price": 59,
+        "inStock": 2700,
+        "mnQuantity": 900,
         "name": "Locking Hub Diagram",
         "description": "Locking hubs, also known as free wheeling hubs are fitted to some (mainly older) four-wheel drive vehicles, allowing the front wheels to rotate freely when "
     },
     {
         "image": "https://htmldemo.net/lukas/lukas/assets/img/product/product-5.png",
-        "price": 24,
-        "inStock": 27,
-        "mnQuantity": 37,
+        "price": 52,
+        "inStock": 6000,
+        "mnQuantity": 1500,
         "name": "Metallic cotton dress",
         "description": "Car steering wheels are often covered with leather in the higher price categories. Because they are in regular contact with skin and sweat, they are almost .."
     }

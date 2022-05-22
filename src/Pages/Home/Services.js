@@ -1,17 +1,17 @@
 import React from 'react';
+import useServices from '../../Hooks/useServices';
+import Service from './Service';
 
 const Services = () => {
+    const [services, setServices] = useServices();
+    console.log(services);
+
     return (
-        <div class="card w-96 bg-base-100 shadow-xl">
-            <figure class="px-10 pt-10">
-                <img src="https://api.lorem.space/image/shoes?w=400&h=225" alt="Shoes" class="rounded-xl" />
-            </figure>
-            <div class="card-body items-center text-center">
-                <h2 class="card-title">Shoes!</h2>
-                <p>If a dog chews shoes whose shoes does he choose?</p>
-                <div class="card-actions">
-                    <button class="btn btn-primary">Buy Now</button>
-                </div>
+        <div>
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-5'>
+                {
+                    services.map(service => <Service key={service._id} service={service}></Service>)
+                }
             </div>
         </div>
     );
