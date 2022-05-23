@@ -19,7 +19,7 @@ const Navbar = () => {
                         </li>
                     </ul>
                 </div>
-                <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
+                <Link to="/" class="btn btn-ghost normal-case text-xl">daisyUI</Link>
             </div>
             <div class="navbar-end hidden lg:flex">
                 <ul class="menu menu-horizontal p-0">
