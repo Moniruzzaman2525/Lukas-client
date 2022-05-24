@@ -57,6 +57,7 @@ const MyOrder = () => {
                             <th>Product Name</th>
                             <th>Product Photo</th>
                             <th></th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody>
