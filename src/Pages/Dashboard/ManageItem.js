@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
 import useServices from '../../Hooks/useServices';
-import Manage from './Manage';
+import Manage from '../ManageItem/Manage';
 
 const ManageItem = () => {
     const [services, setServices] = useState([]);

@@ -1,5 +1,7 @@
+import { signOut } from 'firebase/auth';
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
 import Order from './Order';
@@ -7,17 +9,28 @@ import Order from './Order';
 const MyOrder = () => {
     const [user] = useAuthState(auth)
     const [orders, setOrders] = useState([]);
-
+    const navigate = useNavigate()
     const email = user?.email;
     useEffect(() => {
-        fetch(`http://localhost:5000/order/${email}`, {
+        fetch(`http://localhost:5000/order?email=${email}`, {
             method: 'GET',
             headers: {
                 'authorization': `Bearer ${localStorage.getItem('accessToken')}`
             }
         })
-            .then(res => res.json())
-            .then(data => setOrders(data))
+            .then(res => {
+                console.log('res', res);
+                if (res.status === 401 || res.send === 401) {
+                    signOut();
+                    localStorage.removeItem('accessToken')
+                    navigate('/home')
+                }
+                return res.json()
+            })
+            .then(data => {
+
+                setOrders(data)
+            })
     }, [email]);
 
     const handleCancel = id => {
@@ -48,7 +61,7 @@ const MyOrder = () => {
                     </thead>
                     <tbody>
                         {
-                            orders.map((order, index) => <Order handleCancel={handleCancel} order={order} key={index}></Order>)
+                            orders?.map((order, index) => <Order handleCancel={handleCancel} order={order} key={index}></Order>)
                         }
                     </tbody>
                 </table>
