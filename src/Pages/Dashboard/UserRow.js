@@ -28,7 +28,7 @@ const UserRow = ({ user, refetch }) => {
     const handleDelete = id => {
         const proceed = window.confirm("Are You Sure Want To Delate!!")
         if (proceed) {
-            const url = `http://localhost:5000/delete/${id}`
+            const url = `http://localhost:5000/delete/user/${id}`
             fetch(url, {
                 method: 'DELETE'
             })

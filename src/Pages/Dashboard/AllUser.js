@@ -16,7 +16,7 @@ const AllUser = () => {
     //         .then(data => setUsers(data))
     // }, [])
 
-    const { data: users, isLoading, refetch } = useQuery('users', () => fetch('http://localhost:5000/user', {
+    const { data: users, isLoading, refetch } = useQuery('users', () => fetch('http://localhost:5000/users', {
         method: 'GET',
         headers: {
             authorization: `Bearer ${localStorage.getItem('accessToken')}`
@@ -29,7 +29,6 @@ const AllUser = () => {
         <div>
             <div class="overflow-x-auto">
                 <table class="table w-full">
-
                     <thead>
                         <tr>
                             <th>Name</th>
@@ -38,7 +37,7 @@ const AllUser = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {users.map(user => <UserRow refetch={refetch} user={user} key={user._id}></UserRow>)}
+                        {users?.map(user => <UserRow refetch={refetch} user={user} key={user._id}></UserRow>)}
                     </tbody>
                 </table>
             </div>

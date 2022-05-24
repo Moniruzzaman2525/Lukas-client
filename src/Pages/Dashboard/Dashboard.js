@@ -24,7 +24,7 @@ const Dashboard = () => {
                         <li><Link to="/dashboard/">My Profile</Link></li>
                         {(!admin) && <li><Link to="/dashboard/myorder">My Order</Link></li>}
                         {!admin && <li><Link to="/dashboard/myreview">Add a Review</Link></li>}
-                        {!admin && <li><Link to="/dashboard/update">Update Profile</Link></li>}
+                        {<li><Link to="/dashboard/update">Update Profile</Link></li>}
                         {admin && <li><Link to="/dashboard/manage">All Order</Link></li>}
                         {
                             admin && <li><Link to="/dashboard/user">All User</Link></li>
