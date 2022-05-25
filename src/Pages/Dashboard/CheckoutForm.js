@@ -11,8 +11,11 @@ const CheckoutForm = ({ booked }) => {
 
 
     const { price, email, userName } = booked;
+
     useEffect(() => {
-        fetch('http://localhost:5000/create-payment-intent', {
+        const url = 'http://localhost:5000/create-payment-intent'
+        console.log(url);
+        fetch(url, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
@@ -22,9 +25,10 @@ const CheckoutForm = ({ booked }) => {
         })
             .then(res => res.json())
             .then(data => {
-                if (data?.clientSecret) {
-                    setClientSecret(data?.clientSecret)
-                }
+                // if (data?.clientSecret) {
+                //     setClientSecret(data?.clientSecret)
+                // }
+                console.log(data);
             })
     }, [price])
 

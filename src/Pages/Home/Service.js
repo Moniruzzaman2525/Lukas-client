@@ -16,7 +16,7 @@ const Service = ({ service }) => {
                 <p>Minimum Quantity: {mnQuantity}</p>
                 <div class="card-actions">
                     <Link to={`/purchase/${_id}`}>
-                        <button class="btn btn-primary">Button</button>
+                        <button class="btn btn-primary">Buy now</button>
                     </Link>
                 </div>
             </div>
