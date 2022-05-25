@@ -5,13 +5,13 @@ const Bannar = () => {
         <div class="carousel w-full">
             <div id="slide1" class="carousel-item relative w-full">
 
-                <div className='md:flex items-center'>
-                    <div className='ml-20 order-2'>
-                        <img className='w-3/4 ml-10' src="https://htmldemo.net/lukas/lukas/assets/img/slider/slider-2-2.png" alt="" />
+                <div className='md:flex items-center mx-auto'>
+                    <div className='order-2'>
+                        <img className='w-2/4 mt-10 mx-auto' src="https://htmldemo.net/lukas/lukas/assets/img/slider/slider-2-2.png" alt="" />
                     </div>
-                    <div className='ml-20 order-1 text-justify'>
-                        <h2 className='text-xl md:text-4xl '>New technology $ build</h2>
-                        <h2 className='text-2xl md:text-6xl font-extrabold'>WHEELES $ FIRES <br />COLLECTION</h2>
+                    <div className='order-1 text-justify mt-10'>
+                        <h2 className='text-xl md:text-3xl text-center'>New technology $ build</h2>
+                        <h2 className='text-2xl md:text-6xl text-center font-extrabold'>WHEELES $ FIRES <br />COLLECTION</h2>
                     </div>
 
                 </div>
@@ -21,13 +21,13 @@ const Bannar = () => {
                 </div>
             </div>
             <div id="slide2" class="carousel-item relative w-full">
-                <div className='md:flex items-center'>
-                    <div className='ml-20 order-2'>
-                        <img className='w-3/4 ml-10' src="https://htmldemo.net/lukas/lukas/assets/img/slider/slider-2-1.png" alt="" />
+                <div className='md:flex items-center mx-auto'>
+                    <div className='order-2'>
+                        <img className='w-2/4  mx-auto' src="https://htmldemo.net/lukas/lukas/assets/img/slider/slider-2-1.png" alt="" />
                     </div>
-                    <div className='ml-20 order-1 text-justify'>
-                        <h2 className='text-xl md:text-4xl '>New technology $ build</h2>
-                        <h2 className='text-2xl md:text-6xl font-extrabold'>WHEELES & FIRES<br />COLLECTION</h2>
+                    <div className=' order-1 text-justify  mt-10'>
+                        <h2 className='text-xl md:text-3xl text-center'>New technology $ build</h2>
+                        <h2 className='text-2xl md:text-5xl font-extrabold text-center'>WHEELES & FIRES<br />COLLECTION</h2>
                     </div>
 
                 </div>
