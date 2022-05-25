@@ -32,7 +32,15 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+
+
+.contact-section {
+  height: 400px;
+  opacity: 0.8;
 }
