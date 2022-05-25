@@ -9,7 +9,7 @@ import CheckoutForm from './CheckoutForm';
 const stripePromise = loadStripe('pk_test_51L1Nt7A2OHxh9T3RoGkTk5q0I6nzFRpjKdqwpp0hNrfd21jSGEtmdgL9LzoctQSJTyBb3kuTKPR1A2lX24vcitEh008Qh9HOIx');
 const Payment = () => {
     const { id } = useParams();
-    const url = `http://localhost:5000/booking/${id}`
+    const url = `http://localhost:5000/booking/booking/${id}`
 
     const { data: booked, isLoading } = useQuery(['booking', id], () => fetch(url, {
         method: 'GET',
