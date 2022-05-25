@@ -1,0 +1,151 @@
+
+
+
+
+
+
+
+
+axiosPrivate
+    .get(`http://localhost:5000/tools/${params.id}`, {
+        headers: {
+            email: authUser?.email,
+        },
+    })
+    .then((response) => {
+        const { data } = response;
+        setTool(data);
+        console.log(data);
+    });
+
+
+
+
+
+axiosPrivate
+    .post(
+        "http://localhost:5000/orders",
+        userOrder,
+        {
+            headers: {
+                email: authUser?.email,
+            },
+        }
+    )
+    .then((response) => {
+        const { data } = response;
+        console.log(data);
+        if (data.insertedId) {
+            console.log("Order added to database");
+            setReload(!reload);
+            navigate("/dashboard/my-orders");
+            window.scrollTo(0, 0);
+            toast.success("Order Placed Successfully");
+
+        }
+    });
+
+
+
+
+import React, { useEffect, useState } from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { useNavigate, useParams } from 'react-router-dom';
+import { toast } from 'react-toastify';
+
+const Purchase = () => {
+    const navigate = useNavigate();
+    const [authUser] = useAuthState(authUser);
+    const params = useParams();
+    const [error, setError] = useState(null);
+
+    const [tool, setTool] = useState([]);
+    const [reload, setReload] = useState(false);
+    const [totalPrice, setTotalPrice] = useState("");
+    const handleGoBack = () => {
+        navigate(-1);
+    };
+
+    useEffect(() => {
+        fetch(`http://localhost:5000/services/${params.id}`)
+            .then(res => res.json())
+            .then(data => setTool(data))
+    }, [authUser, params.id]);
+
+    const {
+        toolName,
+        toolImage,
+        toolDescription,
+        availableQuantity,
+        toolPrice,
+        minOrder,
+    } = tool;
+
+    const [requiredQuantity, setRequiredQuantity] = useState("");
+
+    useEffect(() => {
+        console.log(totalPrice);
+        setTotalPrice(parseInt(toolPrice) * parseInt(requiredQuantity));
+        if (parseInt(requiredQuantity) < parseInt(minOrder)) {
+            setError("Minimum order is " + minOrder);
+        } else if (parseInt(requiredQuantity) > parseInt(availableQuantity)) {
+            setError("Not enough quantity");
+        } else {
+            setError(null);
+        }
+    }
+        , [totalPrice, reload, requiredQuantity, toolPrice, availableQuantity, minOrder]);
+
+
+    useEffect(() => {
+        setRequiredQuantity(minOrder);
+
+    }, [minOrder]);
+
+
+    const userOrder = {
+        userName: authUser?.displayName,
+        userEmail: authUser?.email,
+        toolName,
+        quantity: requiredQuantity,
+        toolImage,
+        toolDescription,
+        availableQuantity,
+        toolPrice,
+        minOrder,
+        requiredQuantity,
+        totalPrice,
+    };
+
+    const handleSubmit = () => {
+
+        fetch('http://localhost:5000/booking', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(userOrder)
+        }
+
+        )
+            .then(res => res.json())
+            .then(result => {
+                if (result.insertedId) {
+                    console.log("Order added to database");
+                    setReload(!reload);
+                    navigate("/dashboard/my-orders");
+                    window.scrollTo(0, 0);
+                    toast.success("Order Placed Successfully");
+
+                }
+            })
+    };
+
+    return (
+        <div>
+        <h2>{ params.id } < /h2>
+        < /div>
+    );
+};
+
+export default Purchase;

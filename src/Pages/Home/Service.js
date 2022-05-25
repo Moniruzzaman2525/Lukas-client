@@ -13,7 +13,7 @@ const Service = ({ service }) => {
                 <p>{description}</p>
                 <p>Price: ${price}</p>
                 <p>InStock: {inStock}</p>
-                <p>Minimum Quantity: {mnQuantity}</p>
+                {/* <p>Minimum Quantity: {mnQuantity}</p> */}
                 <div class="card-actions">
                     <Link to={`/purchase/${_id}`}>
                         <button class="btn btn-primary">Buy now</button>
