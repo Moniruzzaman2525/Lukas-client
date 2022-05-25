@@ -1,7 +1,29 @@
 import React from 'react';
+import { toast } from 'react-toastify';
 
 const Manage = ({ service, handleDelete }) => {
-    const { _id, productName, image, userName } = service;
+    const { _id, isDeliverd, productName, image, userName, transactionId } = service;
+
+
+    const makeShip = () => {
+        fetch(`http://localhost:5000/ship/${_id}`, {
+            method: 'PUT',
+            headers: {
+                authorization: ` Bearer ${localStorage.getItem('token')}`
+            },
+            body: JSON.stringify({ isDeliverd: true })
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.modifiedCount) {
+                    toast.success('On the way for Delivery')
+                }
+                else {
+                    toast.error('Cant Shipped')
+                }
+            })
+    }
+
     return (
         <tr>
             <td>{userName}</td>
@@ -12,8 +34,12 @@ const Manage = ({ service, handleDelete }) => {
                 </div>
             </div></td>
             <td>
-                <button class="btn btn-sm btn-primary mr-2">Pay</button>
-                <button onClick={() => handleDelete(_id)} class="btn btn-sm btn-primary">Cancel</button>
+                {transactionId ? 'Paid' : 'Pending'}
+            </td>
+            <td>
+                {
+                    isDeliverd ? 'Delivery Complete' : <button onClick={makeShip} disabled={!transactionId} class="btn btn-sm btn-primary">Delivery</button>
+                }
             </td>
         </tr>
     );

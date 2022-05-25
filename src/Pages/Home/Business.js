@@ -9,7 +9,7 @@ const Business = () => {
         <div className='my-20'>
             <h2 className='text-center text-5xl uppercase'>Millions business trust us</h2>
             <p className='text-center text-xl uppercase'>try to understand users expectation</p>
-            <div className='grid grid-cols-4 my-20'>
+            <div className='grid md:grid-cols-4 my-20'>
                 <div className='mx-auto'>
                     <h2 className='text-7xl mb-5'><BsFlag></BsFlag></h2>
                     <h2 className='text-5xl mb-2'>75</h2>

@@ -12,6 +12,7 @@ const ManageItem = () => {
             .then(data => setServices(data))
     }, [])
 
+
     const handleDelete = id => {
         const proceed = window.confirm("Are You Sure Want To Delate!!")
         if (proceed) {

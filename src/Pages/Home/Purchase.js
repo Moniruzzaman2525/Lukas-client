@@ -85,7 +85,7 @@ const Purchase = () => {
                         <h1 class="text-5xl font-bold uppercase">{service.name}</h1>
                         <p class="py-2">Price: ${service.price}</p>
                         <p>InStock: {service.inStock}</p>
-                        <p>Minimum Quantity: 100</p>
+                        <p>Minimum Order: 100</p>
 
                     </div>
                 </div>

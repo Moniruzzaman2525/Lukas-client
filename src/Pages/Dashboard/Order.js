@@ -17,7 +17,7 @@ const Order = ({ order }) => {
             </td>
             <td>
                 {
-                    (order.price && order.paid) ? <button class="btn btn-sm btn-primary">Review</button> : 'Plz pay'
+                    (order.price && order.paid) ? <Link to="/dashboard/myreview"><button class="btn btn-sm btn-primary">Review</button></Link> : 'Plz pay'
                 }
             </td>
         </tr>
