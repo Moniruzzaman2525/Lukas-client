@@ -41,7 +41,8 @@ const Purchase = () => {
 
     const handleAddItems = e => {
         e.preventDefault();
-
+        let qtn = (e.target.value)
+        console.log(qtn);
         const items = {
             email: user?.email,
             image: service?.image,
@@ -76,6 +77,18 @@ const Purchase = () => {
     return (
         <div>
             <div className='grid grid-cols-1 md:grid-cols-2'>
+
+                <div class="mx-auto">
+                    <img src={service.image} class="max-w-sm mx-auto rounded-lg shadow-2xl" alt='' />
+                    <div>
+                        <h2 className="text-2xl">Hello, {user.displayName}</h2>
+                        <h1 class="text-5xl font-bold uppercase">{service.name}</h1>
+                        <p class="py-2">Price: ${service.price}</p>
+                        <p>InStock: {service.inStock}</p>
+                        <p>Minimum Quantity: 100</p>
+
+                    </div>
+                </div>
                 <div className='w-1/2 mx-auto mt-10 mb-10'>
                     <h1 className='text-3xl mb-5 text-center font-bold'>Please <span style={{ color: '#64B9B4' }}>Order</span></h1>
                     <form onSubmit={handleAddItems} className='w'>
@@ -100,17 +113,7 @@ const Purchase = () => {
                     
                 </div> */}
 
-                <div class="mx-auto">
-                    <img src={service.image} class="max-w-sm mx-auto rounded-lg shadow-2xl" alt='' />
-                    <div>
-                        <h2 className="text-2xl">Hello, {user.displayName}</h2>
-                        <h1 class="text-5xl font-bold uppercase">{service.name}</h1>
-                        <p class="py-2">Price: ${service.price}</p>
-                        <p>InStock: {service.inStock}</p>
-                        <p>Minimum Quantity: 100</p>
 
-                    </div>
-                </div>
             </div>
         </div>
 

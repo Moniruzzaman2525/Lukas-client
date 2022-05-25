@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Order = ({ order, handleCancel }) => {
+const Order = ({ order }) => {
     return (
         <tr>
             <th>{order.userName}</th>
@@ -16,7 +16,9 @@ const Order = ({ order, handleCancel }) => {
                 {(order.price && order.paid) && <span class="text-success">Paid</span>}
             </td>
             <td>
-                <button onClick={() => handleCancel(order._id)} class="btn btn-sm btn-primary">Cancel</button>
+                {
+                    (order.price && order.paid) ? <button class="btn btn-sm btn-primary">Review</button> : 'Plz pay'
+                }
             </td>
         </tr>
     );
