@@ -6,7 +6,7 @@ const Manage = ({ service, handleDelete }) => {
 
 
     const makeShip = () => {
-        fetch(`http://localhost:5000/ship/${_id}`, {
+        fetch(`https://cryptic-retreat-62396.herokuapp.com/ship/${_id}`, {
             method: 'PUT',
             headers: {
                 authorization: ` Bearer ${localStorage.getItem('token')}`

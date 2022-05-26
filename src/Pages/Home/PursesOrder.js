@@ -50,7 +50,7 @@
 //         }
 
 //         console.log(userInput);
-//         axios.post('http://localhost:5000/booking', userInput)
+//         axios.post('https://cryptic-retreat-62396.herokuapp.com/booking', userInput)
 //             .then(response => {
 //                 const { data } = response;
 //                 if (data.insertedId) {
@@ -62,7 +62,7 @@
 
 //     }
 //     useEffect(() => {
-//         fetch(`http://localhost:5000/services/${id}`)
+//         fetch(`https://cryptic-retreat-62396.herokuapp.com/services/${id}`)
 //             .then(res => res.json())
 //             .then(data => setTool(data))
 //     }, [id])

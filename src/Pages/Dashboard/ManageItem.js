@@ -7,7 +7,7 @@ const ManageItem = () => {
     const [services, setServices] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/booking')
+        fetch('https://cryptic-retreat-62396.herokuapp.com/booking')
             .then(res => res.json())
             .then(data => setServices(data))
     }, [])
@@ -16,7 +16,7 @@ const ManageItem = () => {
     const handleDelete = id => {
         const proceed = window.confirm("Are You Sure Want To Delate!!")
         if (proceed) {
-            const url = `http://localhost:5000/delete/booking/${id}`
+            const url = `https://cryptic-retreat-62396.herokuapp.com/delete/booking/${id}`
             fetch(url, {
                 method: 'DELETE'
             })

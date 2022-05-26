@@ -7,7 +7,7 @@
 
 
 axiosPrivate
-    .get(`http://localhost:5000/tools/${params.id}`, {
+    .get(`https://cryptic-retreat-62396.herokuapp.com/tools/${params.id}`, {
         headers: {
             email: authUser?.email,
         },
@@ -24,7 +24,7 @@ axiosPrivate
 
 axiosPrivate
     .post(
-        "http://localhost:5000/orders",
+        "https://cryptic-retreat-62396.herokuapp.com/orders",
         userOrder,
         {
             headers: {
@@ -67,7 +67,7 @@ const Purchase = () => {
     };
 
     useEffect(() => {
-        fetch(`http://localhost:5000/services/${params.id}`)
+        fetch(`https://cryptic-retreat-62396.herokuapp.com/services/${params.id}`)
             .then(res => res.json())
             .then(data => setTool(data))
     }, [authUser, params.id]);
@@ -119,7 +119,7 @@ const Purchase = () => {
 
     const handleSubmit = () => {
 
-        fetch('http://localhost:5000/booking', {
+        fetch('https://cryptic-retreat-62396.herokuapp.com/booking', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

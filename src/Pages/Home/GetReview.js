@@ -12,13 +12,6 @@ const GetReview = ({ r }) => {
             <FontAwesomeIcon className='icon-color' icon={faStar}></FontAwesomeIcon>
         </div>
     }
-    else if (rating == 4.8) {
-        myIcon = <div> <FontAwesomeIcon className='icon-color' icon={faStar}></FontAwesomeIcon>
-            <FontAwesomeIcon className='icon-color' icon={faStar}></FontAwesomeIcon>
-            <FontAwesomeIcon className='icon-color' icon={faStar}></FontAwesomeIcon>
-            <FontAwesomeIcon className='icon-color' icon={faStar}></FontAwesomeIcon>
-            <FontAwesomeIcon className='icon-color' icon={faStarHalfStroke}></FontAwesomeIcon>   </div>
-    }
     else if (rating == 4.5) {
         myIcon = <div> <FontAwesomeIcon className='icon-color' icon={faStar}></FontAwesomeIcon>
             <FontAwesomeIcon className='icon-color' icon={faStar}></FontAwesomeIcon>
@@ -90,7 +83,7 @@ const GetReview = ({ r }) => {
                 </div>
                 <p className='text-center'> {myIcon}</p>
                 <div>
-                    <p className="pl-20 pt-5 pb-5">`{r.opinion}`</p>
+                    <p className="pl-20 pt-5 pb-5">`{r.review}`</p>
                 </div>
 
             </div>

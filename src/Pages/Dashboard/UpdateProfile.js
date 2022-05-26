@@ -17,7 +17,7 @@ const UpdateProfile = () => {
             // description: e.target.description.value,
             // img: e.target.img.value
         }
-        axios.post("http://localhost:5000/update", items)
+        axios.post("https://cryptic-retreat-62396.herokuapp.com/update", items)
             .then(response => {
                 console.log(response);
                 e.target.reset();

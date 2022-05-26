@@ -6,7 +6,7 @@ import UserRow from './UserRow';
 const AllUser = () => {
     // const [users, setUsers] = useState([]);
     // useEffect(() => {
-    //     fetch('http://localhost:5000/user', {
+    //     fetch('https://cryptic-retreat-62396.herokuapp.com/user', {
     //         method: 'GET',
     //         headers: {
     //             authorization: `Bearer ${localStorage.getItem('accessToken')}`
@@ -16,7 +16,7 @@ const AllUser = () => {
     //         .then(data => setUsers(data))
     // }, [])
 
-    const { data: users, isLoading, refetch } = useQuery('users', () => fetch('http://localhost:5000/users', {
+    const { data: users, isLoading, refetch } = useQuery('users', () => fetch('https://cryptic-retreat-62396.herokuapp.com/users', {
         method: 'GET',
         headers: {
             authorization: `Bearer ${localStorage.getItem('accessToken')}`

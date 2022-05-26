@@ -8,7 +8,7 @@ const MyProfile = () => {
     const [user, loading] = useAuthState(auth);
     const [profile, setProfile] = useState([]);
     useEffect(() => {
-        fetch(`http://localhost:5000/user?email=${user?.email}`)
+        fetch(`https://cryptic-retreat-62396.herokuapp.com/user?email=${user?.email}`)
             .then(res => res.json())
             .then(data => setProfile(data))
     }, [user])

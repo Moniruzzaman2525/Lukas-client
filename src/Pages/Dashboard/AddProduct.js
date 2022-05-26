@@ -13,7 +13,7 @@ const AddProduct = () => {
             description: e.target.description.value,
             image: e.target.image.value
         }
-        axios.post("http://localhost:5000/add", items)
+        axios.post("https://cryptic-retreat-62396.herokuapp.com/add", items)
             .then(response => {
                 console.log(response);
                 e.target.reset();

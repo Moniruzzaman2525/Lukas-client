@@ -16,7 +16,7 @@ const CheckoutForm = ({ booked }) => {
     const { _id, price, email, userName } = booked;
 
     useEffect(() => {
-        const url = 'http://localhost:5000/create-payment-intent'
+        const url = 'https://cryptic-retreat-62396.herokuapp.com/create-payment-intent'
         console.log(url);
         fetch(url, {
             method: 'POST',
@@ -81,7 +81,7 @@ const CheckoutForm = ({ booked }) => {
                 booking: _id,
                 transactionId: paymentIntent.id
             }
-            fetch(`http://localhost:5000/booking/${_id}`, {
+            fetch(`https://cryptic-retreat-62396.herokuapp.com/booking/${_id}`, {
                 method: 'PATCH',
                 headers: {
                     'content-type': 'application/json',

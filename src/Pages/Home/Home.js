@@ -3,7 +3,7 @@ import Bannar from './Bannar';
 import Business from './Business';
 import Contact from './Contact';
 import DeliverySestem from './DeliverySestem';
-import ReviewCard from './ReviewCard';
+import ReviewSlider from './ReviewSlider';
 import Services from './Services';
 
 const Home = () => {
@@ -14,7 +14,7 @@ const Home = () => {
             <Services></Services>
             <Business></Business>
             <Contact></Contact>
-            <ReviewCard></ReviewCard>
+            <ReviewSlider></ReviewSlider>
         </div>
     );
 };

@@ -2,7 +2,7 @@ import React from 'react';
 
 const DeliverySestem = () => {
     return (
-        <div className='grid grid-cols-1 md:grid-cols-3 mx-5 mt-20'>
+        <div className='grid grid-cols-1 md:grid-cols-3 mx-5 my-48'>
             <div className='flex mx-auto'>
                 <div className='mr-5'>
                     <img src="https://htmldemo.net/lukas/lukas/assets/img/icons/icon-1.png" alt="" />

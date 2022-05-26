@@ -12,7 +12,7 @@ const MyOrder = () => {
     const navigate = useNavigate()
     const email = user?.email;
     useEffect(() => {
-        fetch(`http://localhost:5000/order?email=${email}`, {
+        fetch(`https://cryptic-retreat-62396.herokuapp.com/order?email=${email}`, {
             method: 'GET',
             headers: {
                 'authorization': `Bearer ${localStorage.getItem('accessToken')}`
@@ -36,7 +36,7 @@ const MyOrder = () => {
     // const handleCancel = id => {
     //     const proceed = window.confirm("Are You Sure Want To Delate!!")
     //     if (proceed) {
-    //         const url = `http://localhost:5000/delete/booking/${id}`
+    //         const url = `https://cryptic-retreat-62396.herokuapp.com/delete/booking/${id}`
     //         fetch(url, {
     //             method: 'DELETE'
     //         })

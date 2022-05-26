@@ -5,7 +5,7 @@ const Contact = () => {
     return (
         <div style={{
             background: `url(${contact})`
-        }} className="contact-section mx-20 relative">
+        }} className="contact-section p-4 mx-20 relative">
             <div className='absolute text-center md:left-[15%] md:top-[15%]'>
                 <h2 className='text-white text-xl mb-4 font-bold'>SPECIAL OFFER FOR SUBSCRIPTION</h2>
                 <h2 className='text-white text-3xl mb-4'>GET INSTANT DISCOUNT FOR <br /> MEMBERSHIP</h2>

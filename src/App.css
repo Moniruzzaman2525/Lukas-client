@@ -44,3 +44,7 @@
   height: 400px;
   opacity: 0.8;
 }
+
+.icon-color-empty {
+  color: rgb(173, 173, 173);
+}

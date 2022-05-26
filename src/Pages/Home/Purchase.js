@@ -14,7 +14,7 @@ const Purchase = () => {
     const [btnDisable, setBtnDisable] = useState(false);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/services/${id}`)
+        fetch(`https://cryptic-retreat-62396.herokuapp.com/services/${id}`)
             .then(res => res.json())
             .then(data => setService(data))
     }, [id])
@@ -54,7 +54,7 @@ const Purchase = () => {
             // updatePrice
         }
 
-        fetch('http://localhost:5000/booking', {
+        fetch('https://cryptic-retreat-62396.herokuapp.com/booking', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -75,7 +75,7 @@ const Purchase = () => {
 
     }
     return (
-        <div>
+        <div className='py-20'>
             <div className='grid grid-cols-1 md:grid-cols-2'>
 
                 <div class="mx-auto">

@@ -19,6 +19,9 @@ import ManageAllProduct from './Pages/Dashboard/ManageAllProduct';
 import AddProduct from './Pages/Dashboard/AddProduct';
 import UpdateProfile from './Pages/Dashboard/UpdateProfile';
 import Payment from './Pages/Dashboard/Payment';
+import "swiper/css/bundle";
+import Blog from './Pages/ExtraPage/Blog';
+import RequireAuth from './Pages/Login/RequireAuth';
 
 function App() {
   return (
@@ -28,8 +31,8 @@ function App() {
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/signup' element={<Signup></Signup>}></Route>
-
-        <Route path='/dashboard' element={<Dashboard></Dashboard>}>
+        <Route path='/blog' element={<Blog></Blog>}></Route>
+        <Route path='/dashboard' element={<RequireAuth><Dashboard></Dashboard></RequireAuth>}>
           <Route index element={<MyProfile></MyProfile>}></Route>
           <Route path='myreview' element={<MyReview></MyReview>}></Route>
           <Route path='payment/:id' element={<Payment></Payment>}></Route>
@@ -41,7 +44,7 @@ function App() {
           <Route path='user' element={<RequireAdmin><AllUser></AllUser></RequireAdmin>}></Route>
         </Route>
 
-        <Route path='/purchase/:id' element={<Purchase></Purchase>}></Route>
+        <Route path='/purchase/:id' element={<RequireAuth><Purchase></Purchase></RequireAuth>}></Route>
       </Routes>
       <Footer></Footer>
       <ToastContainer></ToastContainer>
