@@ -15,7 +15,7 @@ import SingleReviews from "./SingleReview";
 const ReviewSlider = () => {
     const [reviewes, setReviewes] = useState([]);
     useEffect(() => {
-        fetch("http://localhost:5000/reviews")
+        fetch("https://cryptic-retreat-62396.herokuapp.com/reviews")
             .then(res => res.json())
             .then(data => {
                 setReviewes(data);
