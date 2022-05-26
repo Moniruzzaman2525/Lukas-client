@@ -24,6 +24,7 @@ import Blog from './Pages/ExtraPage/Blog';
 import RequireAuth from './Pages/Login/RequireAuth';
 import About from './Pages/Home/About';
 import NotFound from './Shared/NotFound';
+import Portfolio from './Pages/ExtraPage/Portfolio';
 
 function App() {
   return (
@@ -34,7 +35,8 @@ function App() {
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/signup' element={<Signup></Signup>}></Route>
         <Route path='/blog' element={<Blog></Blog>}></Route>
-        <Route path='/about' element={<About></About>}></Route>
+        <Route path='/blog' element={<Blog></Blog>}></Route>
+        <Route path='/portfolio' element={<Portfolio></Portfolio>}></Route>
         <Route path='/dashboard' element={<RequireAuth><Dashboard></Dashboard></RequireAuth>}>
           <Route index element={<MyProfile></MyProfile>}></Route>
           <Route path='myreview' element={<MyReview></MyReview>}></Route>

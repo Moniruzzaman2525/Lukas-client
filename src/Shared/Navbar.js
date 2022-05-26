@@ -14,7 +14,7 @@ const Navbar = () => {
     };
     // console.log(user);
     return (
-        <div class="navbar bg-white py-5 md:px-20">
+        <div class="navbar bg-white sticky top-0 py-5 md:px-20">
             <div class="navbar-start">
                 <div class="dropdown">
                     <label tabindex="0" class="btn btn-ghost lg:hidden">
@@ -23,6 +23,7 @@ const Navbar = () => {
                     <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                         {user && <li><Link className='text-success' to="/dashboard">DASHBOARD</Link></li>}
                         <li><Link className='text-success' to="/blog">BLOG</Link></li>
+                        <li><Link className='text-success' to="/portfolio">PORTFOLIO</Link></li>
                         <li><Link className='text-success' to="/about">ABOUT</Link></li>
                         <li>{
                             user ? <button className='text-success' onClick={logout}>SIGN OUT</button> :
@@ -38,6 +39,7 @@ const Navbar = () => {
                 <ul class="menu menu-horizontal p-0">
                     {user && <li><Link className='text-success font-bold' to="/dashboard">DASHBOARD</Link></li>}
                     <li><Link className='text-success font-bold' to="/blog">BLOG</Link></li>
+                    <li><Link className='text-success font-bold' to="/portfolio">PORTFOLIO</Link></li>
                     <li><Link className='text-success font-bold' to="/about">ABOUT</Link></li>
                     <li>{
                         user ? <button className='text-success font-bold' onClick={logout}>SIGN OUT</button> :
