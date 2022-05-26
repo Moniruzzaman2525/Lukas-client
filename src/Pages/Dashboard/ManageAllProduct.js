@@ -1,6 +1,7 @@
 import React from 'react';
 import { toast } from 'react-toastify';
 import useServices from '../../Hooks/useServices';
+import Loading from '../../Shared/Loading';
 import SingleService from './SingleService';
 
 const ManageAllProduct = () => {
@@ -22,11 +23,14 @@ const ManageAllProduct = () => {
     }
     return (
         <div>
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-5'>
-                {
-                    services.map(service => <SingleService handleDelete={handleDelete} service={service} key={service._id}></SingleService>)
-                }
-            </div>
+            {
+                services.length === 0 ? <Loading></Loading> :
+                    <div className='grid grid-cols-1 md:grid-cols-2 gap-5'>
+                        {
+                            services.map(service => <SingleService handleDelete={handleDelete} service={service} key={service._id}></SingleService>)
+                        }
+                    </div>
+            }
         </div>
     );
 };

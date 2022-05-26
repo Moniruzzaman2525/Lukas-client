@@ -4,6 +4,8 @@ import { useForm } from 'react-hook-form';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import useToken from '../../Hooks/useToken'
+import Loading from '../../Shared/Loading';
+import { toast } from 'react-toastify';
 
 const Signup = () => {
 
@@ -38,8 +40,12 @@ const Signup = () => {
         await createUserWithEmailAndPassword(data.email, data.password);
         await updateProfile({ displayName: data.name });
         console.dir('Update done');
-
+        toast.success('User Sign Up Successfully')
     };
+
+    if (loading || updating || gLoading) {
+        return <Loading></Loading>
+    }
     return (
         <div className='flex justify-center items-center h-screen'>
             <div className="card w-96 bg-base-100 shadow-xl">

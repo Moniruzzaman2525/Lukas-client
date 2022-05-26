@@ -25,7 +25,7 @@ const Portfolio = () => {
                         blinkSpeed={500} // <number>
                     />
                     <p className='text-gray-500 mt-5'>
-                        I am a <span className='text-success'>FULL</span> stack web developer from Sherpur, Bangladesh. I work as a freelance web developer for clients across the globe with great product delivery. I also worked with Edumonk Foundation and Inception Wave Pvt. Ltd as a Software Developer intern and am looking for opportunities to further develop my skills.
+                        I am a <span className='text-success'>MERN</span> stack web developer from Sherpur, Bangladesh. I work as a freelance web developer for clients across the globe with great product delivery. I also worked with Edumonk Foundation and Inception Wave Pvt. Ltd as a Software Developer intern and am looking for opportunities to further develop my skills.
                     </p>
                     <p className='text-gray-500 my-3'>Skilled in HTML, CSS, Bootstrap, TailwindCSS, Javascript(ES6), and MERN (Mongo DB, Express, React, Node) stack, I also have sound knowledge of Data Structures and Algorithms with great problem-solving capabilities.</p>
 
@@ -34,8 +34,8 @@ const Portfolio = () => {
                     </p>
 
                 </div>
-                <div className="image flex-1 ml-5 ">
-                    <img className='w-1/2 ml-auto' src={myImage} alt="" />
+                <div className="image  flex-1 ml-5 ">
+                    <img className='w-1/2 mt-10 rounded-full mx-auto ml-auto' src={myImage} alt="" />
                 </div>
             </div>
             {/* Skills */}
@@ -45,10 +45,10 @@ const Portfolio = () => {
                     <SkillsData></SkillsData>
                 </div>
                 <div>
-                    <h1 className='text-center text-3xl font-semibold mb-10'>Sample MERN projects</h1>
+                    <h1 className='text-center text-3xl font-semibold mb-10'>Sample <span className='text-success'>MERN</span> projects</h1>
                     <div className="grid grid-cols-3">
                         <div className="mx-3">
-                            <a href="https://flavoro-4fd30.web.app/">
+                            <a href="https://assignment-12-f5e9a.web.app/portfolio/">
                                 <img className='w-1/3 ml-auto object-fill' src={projectOne} alt="" />
                             </a>
                         </div>

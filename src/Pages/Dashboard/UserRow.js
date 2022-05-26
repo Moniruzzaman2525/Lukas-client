@@ -45,9 +45,9 @@ const UserRow = ({ user, refetch }) => {
     return (
         <tr>
             <th>{user.email}</th>
-            <td>{role !== 'admin' ? <button onClick={makeAdmin} class="btn btn-success btn-xs">Make admin</button> : 'Already An Admin'}</td>
+            <td>{role !== 'admin' ? <button onClick={makeAdmin} className="btn btn-success btn-xs">Make admin</button> : 'Already An Admin'}</td>
             <td>
-                <button onClick={() => handleDelete(_id)} class="btn btn-success text-white btn-xs">remove user</button>
+                <button onClick={() => handleDelete(_id)} className="btn btn-success text-white btn-xs">remove user</button>
             </td>
         </tr>
     );

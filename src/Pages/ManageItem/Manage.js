@@ -1,9 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { toast } from 'react-toastify';
 
-const Manage = ({ service, handleDelete }) => {
+const Manage = ({ service, refetch }) => {
     const { _id, isDeliverd, productName, image, userName, transactionId } = service;
-
 
     const makeShip = () => {
         fetch(`https://cryptic-retreat-62396.herokuapp.com/ship/${_id}`, {
@@ -16,6 +15,7 @@ const Manage = ({ service, handleDelete }) => {
             .then(res => res.json())
             .then(data => {
                 if (data.modifiedCount) {
+                    refetch();
                     toast.success('On the way for Delivery')
                 }
                 else {
@@ -28,8 +28,8 @@ const Manage = ({ service, handleDelete }) => {
         <tr>
             <td>{userName}</td>
             <td className='uppercase'>${productName}</td>
-            <td><div class="avatar">
-                <div class="w-20 rounded">
+            <td><div className="avatar">
+                <div className="w-20 rounded">
                     <img src={image} alt="Tailwind-CSS-Avatar-component" />
                 </div>
             </div></td>
@@ -38,7 +38,7 @@ const Manage = ({ service, handleDelete }) => {
             </td>
             <td>
                 {
-                    isDeliverd ? 'Delivery Complete' : <button onClick={makeShip} disabled={!transactionId} class="btn btn-sm btn-success text-white font-bold">Delivery</button>
+                    isDeliverd ? 'Delivery Complete' : <button onClick={makeShip} disabled={!transactionId} className="btn btn-sm btn-success text-white font-bold">Delivery</button>
                 }
             </td>
         </tr>

@@ -2,9 +2,10 @@ import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { toast, ToastContainer } from 'react-toastify';
 import auth from '../../firebase.init';
+import Loading from '../../Shared/Loading';
 
 const MyReview = () => {
-    const [user] = useAuthState(auth)
+    const [user, loading] = useAuthState(auth)
 
     const handleSubmit = e => {
         e.preventDefault();
@@ -38,6 +39,10 @@ const MyReview = () => {
                 })
         }
         e.target.reset()
+    }
+
+    if (loading) {
+        return <Loading></Loading>
     }
     return (
         <div>

@@ -4,10 +4,11 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
+import Loading from '../../Shared/Loading';
 import Order from './Order';
 
 const MyOrder = () => {
-    const [user] = useAuthState(auth)
+    const [user, loading] = useAuthState(auth)
     const [orders, setOrders] = useState([]);
     const navigate = useNavigate()
     const email = user?.email;
@@ -33,24 +34,35 @@ const MyOrder = () => {
             })
     }, [email]);
 
-    // const handleCancel = id => {
-    //     const proceed = window.confirm("Are You Sure Want To Delate!!")
-    //     if (proceed) {
-    //         const url = `https://cryptic-retreat-62396.herokuapp.com/delete/booking/${id}`
-    //         fetch(url, {
-    //             method: 'DELETE'
-    //         })
-    //             .then(res => res.json())
-    //             .then(data => console.log('hello', data))
-    //         const updateService = orders.filter(service => service._id !== id);
-    //         setOrders(updateService);
-    //         toast.success('Items Delate Successful')
-    //     }
-    // }
+
+    const handleDelete = id => {
+        const proceed = window.confirm("Are You Sure Want To Delate!!")
+        if (proceed) {
+            const url = `https://cryptic-retreat-62396.herokuapp.com/delete/booking/${id}`
+            fetch(url, {
+                method: 'DELETE'
+            })
+                .then(res => res.json())
+                .then(data => console.log('hello', data))
+            const updateService = orders.filter(service => service._id !== id);
+            setOrders(updateService);
+            toast.success('Items Delate Successful')
+        }
+    }
+
+
+    if (loading) {
+        return <Loading></Loading>
+    }
     return (
-        <div className='grid grid-cols-1 gap-5 md:grid-cols-2'>
+        <div>
             {
-                orders?.map((order, index) => <Order order={order} key={index}></Order>)
+                orders.length === 0 ? <Loading></Loading> :
+                    <div className='grid grid-cols-1 gap-5 md:grid-cols-2'>
+                        {
+                            orders?.map((order, index) => <Order handleDelete={handleDelete} order={order} key={index}></Order>)
+                        }
+                    </div>
             }
         </div>
     );

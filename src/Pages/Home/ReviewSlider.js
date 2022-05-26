@@ -23,7 +23,7 @@ const ReviewSlider = () => {
     }, [])
     // console.log(reviewes);
     return (
-        <>
+        <div className="hidden md:block">
             <Swiper
                 slidesPerView={3}
                 spaceBetween={30}
@@ -41,7 +41,7 @@ const ReviewSlider = () => {
                     </SwiperSlide>)
                 }
             </Swiper>
-        </>
+        </div>
     );
 }
 

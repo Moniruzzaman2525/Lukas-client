@@ -2,8 +2,8 @@ import React from 'react';
 
 const Bannar = () => {
     return (
-        <div class="carousel bg-slate-700 md:h-screen w-full">
-            <div id="slide1" class="carousel-item  relative w-full">
+        <div className="carousel bg-slate-700 md:h-screen w-full">
+            <div id="slide1" className="carousel-item  relative w-full">
 
                 <div className='md:flex items-center mx-auto'>
                     <div className='order-2'>
@@ -15,12 +15,12 @@ const Bannar = () => {
                     </div>
 
                 </div>
-                <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                    <a href="#slide4" class="btn btn-circle">❮</a>
-                    <a href="#slide2" class="btn btn-circle">❯</a>
+                <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#slide4" className="btn btn-circle">❮</a>
+                    <a href="#slide2" className="btn btn-circle">❯</a>
                 </div>
             </div>
-            <div id="slide2" class="carousel-item relative w-full">
+            <div id="slide2" className="carousel-item relative w-full">
                 <div className='md:flex items-center mx-auto'>
                     <div className='order-2'>
                         <img className='w-2/4 mb-10 md:w-2/3 mt-10 mx-auto' src="https://htmldemo.net/lukas/lukas/assets/img/slider/slider-2-1.png" alt="" />
@@ -31,23 +31,23 @@ const Bannar = () => {
                     </div>
 
                 </div>
-                <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                    <a href="#slide1" class="btn btn-circle">❮</a>
-                    <a href="#slide3" class="btn btn-circle">❯</a>
+                <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#slide1" className="btn btn-circle">❮</a>
+                    <a href="#slide3" className="btn btn-circle">❯</a>
                 </div>
             </div>
-            {/* <div id="slide3" class="carousel-item relative w-full">
-                <img src="https://api.lorem.space/image/car?w=800&h=200&hash=A89D0DE6" class="w-full" />
-                <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                    <a href="#slide2" class="btn btn-circle">❮</a>
-                    <a href="#slide4" class="btn btn-circle">❯</a>
+            {/* <div id="slide3" className="carousel-item relative w-full">
+                <img src="https://api.lorem.space/image/car?w=800&h=200&hash=A89D0DE6" className="w-full" />
+                <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#slide2" className="btn btn-circle">❮</a>
+                    <a href="#slide4" className="btn btn-circle">❯</a>
                 </div>
             </div>
-            <div id="slide4" class="carousel-item relative w-full">
-                <img src="https://api.lorem.space/image/car?w=800&h=200&hash=225E6693" class="w-full" />
-                <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                    <a href="#slide3" class="btn btn-circle">❮</a>
-                    <a href="#slide1" class="btn btn-circle">❯</a>
+            <div id="slide4" className="carousel-item relative w-full">
+                <img src="https://api.lorem.space/image/car?w=800&h=200&hash=225E6693" className="w-full" />
+                <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#slide3" className="btn btn-circle">❮</a>
+                    <a href="#slide1" className="btn btn-circle">❯</a>
                 </div>
             </div> */}
         </div>

@@ -2,8 +2,10 @@ import React, { useEffect } from 'react';
 import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
 import useToken from '../../Hooks/useToken';
+import Loading from '../../Shared/Loading';
 
 const Login = () => {
     const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
@@ -33,7 +35,12 @@ const Login = () => {
     const { register, formState: { errors }, handleSubmit } = useForm();
     const onSubmit = data => {
         signInWithEmailAndPassword(data.email, data.password);
+        toast.success('User Login SuccessFully')
     };
+
+    if (loading || gLoading) {
+        return <Loading></Loading>
+    }
     return (
         <div className='flex justify-center items-center h-screen'>
             <div className="card w-96 bg-base-100 shadow-xl">
