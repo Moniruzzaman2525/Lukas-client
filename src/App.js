@@ -22,6 +22,8 @@ import Payment from './Pages/Dashboard/Payment';
 import "swiper/css/bundle";
 import Blog from './Pages/ExtraPage/Blog';
 import RequireAuth from './Pages/Login/RequireAuth';
+import About from './Pages/Home/About';
+import NotFound from './Shared/NotFound';
 
 function App() {
   return (
@@ -32,6 +34,7 @@ function App() {
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/signup' element={<Signup></Signup>}></Route>
         <Route path='/blog' element={<Blog></Blog>}></Route>
+        <Route path='/about' element={<About></About>}></Route>
         <Route path='/dashboard' element={<RequireAuth><Dashboard></Dashboard></RequireAuth>}>
           <Route index element={<MyProfile></MyProfile>}></Route>
           <Route path='myreview' element={<MyReview></MyReview>}></Route>
@@ -43,8 +46,8 @@ function App() {
           <Route path='manageproduct' element={<RequireAdmin><ManageAllProduct></ManageAllProduct></RequireAdmin>}></Route>
           <Route path='user' element={<RequireAdmin><AllUser></AllUser></RequireAdmin>}></Route>
         </Route>
-
         <Route path='/purchase/:id' element={<RequireAuth><Purchase></Purchase></RequireAuth>}></Route>
+        <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
       <ToastContainer></ToastContainer>

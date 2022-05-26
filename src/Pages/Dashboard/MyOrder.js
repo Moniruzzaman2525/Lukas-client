@@ -48,25 +48,10 @@ const MyOrder = () => {
     //     }
     // }
     return (
-        <div>
-            <div class="overflow-x-auto">
-                <table class="table w-full">
-                    <thead>
-                        <tr>
-                            <th>User Name</th>
-                            <th>Product Name</th>
-                            <th>Product Photo</th>
-                            <th></th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {
-                            orders?.map((order, index) => <Order order={order} key={index}></Order>)
-                        }
-                    </tbody>
-                </table>
-            </div>
+        <div className='grid grid-cols-1 md:grid-cols-3'>
+            {
+                orders?.map((order, index) => <Order order={order} key={index}></Order>)
+            }
         </div>
     );
 };

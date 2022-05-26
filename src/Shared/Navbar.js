@@ -23,6 +23,7 @@ const Navbar = () => {
                     <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                         {user && <li><Link to="/dashboard">DASHBOARD</Link></li>}
                         <li><Link to="/blog">BLOG</Link></li>
+                        <li><Link to="/about">ABOUT</Link></li>
                         <li>{
                             user ? <button className='' onClick={logout}>SIGN OUT</button> :
                                 <Link to="/login" >
@@ -37,6 +38,7 @@ const Navbar = () => {
                 <ul class="menu menu-horizontal p-0">
                     {user && <li><Link to="/dashboard">DASHBOARD</Link></li>}
                     <li><Link to="/blog">BLOG</Link></li>
+                    <li><Link to="/about">ABOUT</Link></li>
                     <li>{
                         user ? <button className='' onClick={logout}>SIGN OUT</button> :
                             <Link to="/login" >

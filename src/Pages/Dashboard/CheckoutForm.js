@@ -114,7 +114,7 @@ const CheckoutForm = ({ booked }) => {
                         },
                     }}
                 />
-                <button className='btn btn-success btn-sm mt-5' type="submit" disabled={!stripe || !clientSecret}>
+                <button className='btn btn-info text-white btn-sm mt-5' type="submit" disabled={!stripe || !clientSecret}>
                     Pay
                 </button>
             </form>

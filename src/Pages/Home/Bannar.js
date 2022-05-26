@@ -2,14 +2,14 @@ import React from 'react';
 
 const Bannar = () => {
     return (
-        <div class="carousel w-full">
-            <div id="slide1" class="carousel-item relative w-full">
+        <div class="carousel bg-slate-700 md:h-screen w-full">
+            <div id="slide1" class="carousel-item  relative w-full">
 
                 <div className='md:flex items-center mx-auto'>
                     <div className='order-2'>
-                        <img className='w-2/4 mt-10 mx-auto' src="https://htmldemo.net/lukas/lukas/assets/img/slider/slider-2-2.png" alt="" />
+                        <img className='w-2/4 mb-10 md:w-2/3 mt-10 mx-auto' src="https://htmldemo.net/lukas/lukas/assets/img/slider/slider-2-2.png" alt="" />
                     </div>
-                    <div className='order-1 text-justify mt-10'>
+                    <div className='order-1 text-justify text-white mt-10'>
                         <h2 className='text-xl md:text-3xl text-center'>New technology $ build</h2>
                         <h2 className='text-2xl md:text-6xl text-center font-extrabold'>WHEELES $ FIRES <br />COLLECTION</h2>
                     </div>
@@ -23,9 +23,9 @@ const Bannar = () => {
             <div id="slide2" class="carousel-item relative w-full">
                 <div className='md:flex items-center mx-auto'>
                     <div className='order-2'>
-                        <img className='w-2/4  mx-auto' src="https://htmldemo.net/lukas/lukas/assets/img/slider/slider-2-1.png" alt="" />
+                        <img className='w-2/4 mb-10 md:w-2/3 mt-10 mx-auto' src="https://htmldemo.net/lukas/lukas/assets/img/slider/slider-2-1.png" alt="" />
                     </div>
-                    <div className=' order-1 text-justify  mt-10'>
+                    <div className=' order-1 text-justify text-white mt-10'>
                         <h2 className='text-xl md:text-3xl text-center'>New technology $ build</h2>
                         <h2 className='text-2xl md:text-5xl font-extrabold text-center'>WHEELES & FIRES<br />COLLECTION</h2>
                     </div>

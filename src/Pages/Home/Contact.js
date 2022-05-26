@@ -12,7 +12,7 @@ const Contact = () => {
                 <p className='text-white mb-4'>Subscribe our newsletter and all latest news of our <br />
                     latest product, promotion and offers</p>
                 <input type="text" placeholder="Enter Your Email Here" class="input bg-black input-bordered input-warning w-full max-w-xs" />
-                <button class="btn btn-secondary mt-4">submit</button>
+                <button class="btn text-white btn-info font-bold mt-4">submit</button>
             </div>
         </div>
     );
