@@ -37,6 +37,7 @@ const ManageItem = () => {
                             <th>Product Name</th>
                             <th>Product Image</th>
                             <th></th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody>

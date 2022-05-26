@@ -41,7 +41,7 @@ const MyReview = () => {
     }
     return (
         <div>
-            <h1 className="mt-5 font-bold text-blue-900 sp-style text-2xl">Give your valuable FeedBack</h1>
+            <h1 className="mt-5 font-bold text-success sp-style text-2xl">Give your valuable FeedBack</h1>
 
             <form className='m-10' onSubmit={handleSubmit}>
 
@@ -65,7 +65,7 @@ const MyReview = () => {
                     <textarea rows="5" cols="20" type="text" id="text" name='opinion' placeholder="we try to give you best service" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
                 </div>
                 <div className='text-center'>
-                    <input type="submit" className="text-white uppercase bg-info focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm md:w-1/5 w-1/2 px-5 py-2.5 text-center dark:bg-blue-600  dark:focus:ring-blue-800" value='Done' />
+                    <input type="submit" className="text-white uppercase bg-success focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm md:w-1/5 w-1/2 px-5 py-2.5 text-center dark:bg-blue-600  dark:focus:ring-blue-800" value='Done' />
                 </div>
 
             </form>

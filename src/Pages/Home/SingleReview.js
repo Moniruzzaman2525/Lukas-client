@@ -64,7 +64,7 @@ const SingleReviews = ({ singleReview }) => {
             </figure> */}
             <div className="card-body items-center text-center">
                 <h2 className="card-title">{name}</h2>
-                {myIcon}
+                <span className='text-success'>{myIcon}</span>
                 <blockquote className='p-4 mt-3 bg-gray-200 italic border-l-4 rounded-lg text-neutral-600 border-neutral-500 quote w-4/6 mx-auto mb-7'>{review}</blockquote>
             </div>
         </div>

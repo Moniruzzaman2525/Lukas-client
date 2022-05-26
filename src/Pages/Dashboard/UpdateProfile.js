@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
 
 const UpdateProfile = () => {
@@ -21,11 +22,12 @@ const UpdateProfile = () => {
             .then(response => {
                 console.log(response);
                 e.target.reset();
+                toast.success('Your Profile Update is Done')
             })
     }
     return (
         <div className='w-1/2 mx-auto mt-10 mb-10'>
-            <h1 className='text-3xl mb-5 text-center font-bold'>Add To <span style={{ color: '#64B9B4' }}>Item</span></h1>
+            <h1 className='text-3xl mb-5 text-center font-bold'>Update Your <span className='text-success'>Profile</span></h1>
             <form onSubmit={handleAddItems} className='w'>
                 <div className="mb-6">
                     <input type="text" value={user?.displayName} readOnly disabled id="text" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-teal-400  focus:border-teal-400  block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-teal-400  dark:focus:border-teal-400  dark:shadow-sm-light" required />
@@ -46,7 +48,7 @@ const UpdateProfile = () => {
                     <input type="text" name='image' id="quantity" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-teal-400  focus:border-teal-400  block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-teal-400  dark:focus:border-teal-400  dark:shadow-sm-light" placeholder='Your image' required />
                 </div>
 
-                <button style={{ backgroundColor: '#64B9B4' }} type="submit" className="text-white font-bold focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-xl px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add New Item</button>
+                <button type="submit" className="text-white bg-success font-bold focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-xl px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add New Item</button>
             </form>
         </div>
     );

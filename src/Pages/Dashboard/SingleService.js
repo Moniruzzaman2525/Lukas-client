@@ -15,7 +15,7 @@ const SingleService = ({ service, handleDelete }) => {
                 <p>InStock: {inStock}</p>
                 <p>Minimum Quantity: {mnQuantity}</p>
                 <div class="card-actions">
-                    <button onClick={() => handleDelete(_id)} class="btn btn-sm btn-primary">Delete Product</button>
+                    <button onClick={() => handleDelete(_id)} class="btn btn-sm btn-success text-white font-bold">Delete Product</button>
                 </div>
             </div>
         </div>

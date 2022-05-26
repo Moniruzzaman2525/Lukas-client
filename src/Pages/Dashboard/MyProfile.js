@@ -27,12 +27,12 @@ const MyProfile = () => {
                         {/* <h1>{profile.email ? profile.email : 'hello'}</h1> */}
                     </div>
                     <div>
-                        <h1 class="text-5xl font-bold">{user?.displayName}</h1>
+                        <h1 class="text-5xl font-bold text-success">{user?.displayName}</h1>
                         <p class="py-2 text-xl">{user?.email}</p>
                         <p class="py-2 text-xl">{profile.phone}</p>
                         <p class="py-2 text-xl">{profile.education}</p>
                         <p class="py-2 text-xl">{profile.address}</p>
-                        <Link to="/dashboard/update"><button class="btn btn-info text-white text-lg">Update Profile</button></Link>
+                        <Link to="/dashboard/update"><button class="btn btn-success text-white text-lg">Update Profile</button></Link>
                     </div>
                 </div>
             </div>

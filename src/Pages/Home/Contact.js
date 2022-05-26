@@ -11,8 +11,8 @@ const Contact = () => {
                 <h2 className='text-white text-3xl mb-4'>GET INSTANT DISCOUNT FOR <br /> MEMBERSHIP</h2>
                 <p className='text-white mb-4'>Subscribe our newsletter and all latest news of our <br />
                     latest product, promotion and offers</p>
-                <input type="text" placeholder="Enter Your Email Here" class="input bg-black input-bordered input-warning w-full max-w-xs" />
-                <button class="btn text-white btn-info font-bold mt-4">submit</button>
+                <input type="text" placeholder="Enter Your Email Here" class="input bg-black input-bordered input-success w-full max-w-xs" />
+                <button class="btn text-white btn-success font-bold mt-4">submit</button>
             </div>
         </div>
     );

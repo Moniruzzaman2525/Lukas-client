@@ -9,7 +9,7 @@ const NotFound = () => {
             </div>
             <div className='mx-auto '>
                 <h2 className='text-5xl'>PAGE NOT FOUND</h2>
-                <Link to="/"><button className='btn btn-info text-white font-bold'>Go to Home</button></Link>
+                <Link to="/"><button className='btn mt-5 btn-info text-white font-bold'>Go to Home</button></Link>
             </div>
         </div>
     );

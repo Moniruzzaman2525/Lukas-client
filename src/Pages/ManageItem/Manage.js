@@ -38,7 +38,7 @@ const Manage = ({ service, handleDelete }) => {
             </td>
             <td>
                 {
-                    isDeliverd ? 'Delivery Complete' : <button onClick={makeShip} disabled={!transactionId} class="btn btn-sm btn-primary">Delivery</button>
+                    isDeliverd ? 'Delivery Complete' : <button onClick={makeShip} disabled={!transactionId} class="btn btn-sm btn-success text-white font-bold">Delivery</button>
                 }
             </td>
         </tr>
